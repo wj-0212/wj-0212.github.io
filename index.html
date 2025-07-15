@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DexReMoE: In-hand Reorientation of General Objects via MoE</title>
+  <!-- 引入 Bulma CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <style>
+    /* 作者与单位样式 */
+    .authors {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 0.5em;
+      line-height: 1.4;
+    }
+    .affiliations {
+      font-size: 0.85rem;
+      color: #777;
+      margin-top: 0.2em;
+      line-height: 1.4;
+    }
+    /* Abstract 专属样式 */
+    .abstract p {
+      font-family: "Georgia", serif;
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 1em;    
+    }
+    .buttons.is-centered .button {
+      font-size: 1.25rem;       /* 默认为 1rem，这里放大到 1.25rem */
+      padding: 0.75em 2em;      /* 上下 0.75em，左右 2em */
+      margin: 1.5em 1em !important;          /* 左右各留 1.5em 间距 */
+    }
+  </style>
+</head>
+<body>
+  <section class="section">
+    <div class="container has-text-centered">
+      <h1 class="title is-2">DexReMoE: In-hand Reorientation of General Objects via Mixtures of Experts</h1>
+      <div class="authors">
+        Jun Wan<sup>1,2</sup>, Xing Liu<sup>1</sup>, Yunlong Dong<sup></sup>
+      </div>
+      <div class="affiliations">
+        <sup>1</sup> Huazhong University of Science and Technology&nbsp;&nbsp;
+      </div>
+      <div class="buttons is-centered" style="margin-top:1em;">
+        <a href="https://arxiv.org/abs/YOUR_ARXIV_ID" target="_blank" class="button is-dark is-rounded is-large">
+          Paper
+        </a>
+        <a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID" target="_blank" class="button is-dark is-rounded is-large">
+          Video
+        </a>
+        <a href="https://github.com/wj-0212/DexReMoE" target="_blank" class="button is-dark is-rounded is-large">
+          Code
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="title is-4"></h2>
+      <div class="video-container" style="position:relative;padding-top:56.25%;">
+        <video controls style="position:absolute;top:0;left:0;width:100%;height:100%;">
+          <source src="video/DexReMoE.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <section class="section abstract">
+    <div class="container">
+      <h2 class="title is-4">Abstract</h2>
+      <p>In-hand object reorientation provides capability for dexterous manipulation, 
+        requiring robust control policies to manage diverse object geometries, maintain stable grasps, and execute precise complex orientation trajectories. 
+        However, prior works focus on single objects or simple geometries and struggle to generalize to complex shapes. In this work, we introduce DexReMoE (Dexterous Reorientation Mixture-of-Experts), 
+        in which multiple expert policies are trained for different complex shapes and integrated within a Mixture-of-Experts (MoE) framework, 
+        making the approach capable of generalizing across a wide range of objects. Additionally, we incorporate object category information as privileged inputs to enhance shape representation. 
+        Our framework is trained in simulation using reinforcement learning (RL) and evaluated on novel out-of-distribution objects 
+        in the most challenging scenario of reorienting objects held in the air by a downward-facing hand. 
+        In terms of the average consecutive success count, DexReMoE achieves a score of 19.5 across a diverse set of 150 objects. 
+        In comparison to the baselines, it also enhances the worst-case performance, increasing it from 0.69 to 6.05. 
+        These results underscore the scalability and adaptability of the DexReMoE framework for general-purpose in-hand reorientation.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="title is-4">DexReMoE Training Framework</h2>
+      <figure class="image is-3by2">
+        <img src="images/model.png" alt="DexReMoE Framework">
+      </figure>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="title is-4">Video Clips</h2>
+      <div class="video-container" style="position:relative;padding-top:56.25%;">
+        <video controls style="position:absolute;top:0;left:0;width:100%;height:100%;">
+          <source src="video/15object.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
